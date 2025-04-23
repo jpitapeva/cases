@@ -1,0 +1,25 @@
+//ordenacao
+
+Teste();
+
+int[] Teste()
+{
+    var numeros = new[] { -4, -1, 0, -3, 10 };
+    
+    for (int i = 0; i < numeros.Length; i++)
+    {
+        for (int prox = i + 1 ; prox < numeros.Length; prox++)
+        {
+            if (numeros[i]< numeros[prox])
+            {
+                var temp = numeros[i];
+                numeros[i] = numeros[prox];
+                numeros[prox] = temp;
+            }
+        }
+    }
+
+    Console.WriteLine(string.Join(",", numeros));
+    return numeros;
+
+}
